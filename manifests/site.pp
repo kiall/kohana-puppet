@@ -20,7 +20,9 @@ import 'nagios'
 
 # Import files..
 import "custom.pp"
+import "common.pp"
+import "users.pp"
 import "role.pp"
-import "website.pp"
+import 'website.pp'
 import "nagios.pp"
 import "nodes.pp"

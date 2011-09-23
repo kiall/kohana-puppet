@@ -5,45 +5,54 @@ custom::user {
 		groups => [
 			"developers",
 			"admin",
+			"www-kohanaframework.org",
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
-			"www-forum.kohanaframework.org"
+			"www-forum.kohanaframework.org",
+			"www-ci.kohanaframework.org"
 		];
 	"zombor":
 		ensure => present,
 		groups => [
 			"developers",
 			"admin",
+			"www-kohanaframework.org",
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
-			"www-forum.kohanaframework.org"
+			"www-forum.kohanaframework.org",
+			"www-ci.kohanaframework.org"
 		];
 	"samsoir":
 		ensure => present,
 		groups => [
 			"developers",
 			"admin",
+			"www-kohanaframework.org",
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
-			"www-forum.kohanaframework.org"
+			"www-forum.kohanaframework.org",
+			"www-ci.kohanaframework.org"
 		];
 	"isaiah":
 		ensure => present,
 		groups => [
 			"developers",
 			"admin",
+			"www-kohanaframework.org",
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
-			"www-forum.kohanaframework.org"
+			"www-forum.kohanaframework.org",
+			"www-ci.kohanaframework.org"
 		];
 	"brmatt":
 		ensure => present,
 		groups => [
 			"developers",
-			"admin",
+			"www-kohanaframework.org",
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
-			"www-forum.kohanaframework.org"
+			"www-forum.kohanaframework.org",
+			"www-ci.kohanaframework.org"
 		];
 }
 

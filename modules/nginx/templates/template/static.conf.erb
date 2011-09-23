@@ -1,0 +1,20 @@
+server {
+	listen [::]:<%=listen %>;
+
+	server_name <%=name %>;
+	root /home/www-<%=name %>/current/;
+
+	index index.htm index.html;
+
+	error_log /home/www-<%=name %>/logs/nginx.error.log;
+	access_log /home/www-<%=name %>/logs/nginx.access.log;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	# Prevent access to hidden files
+	location ~ /\. {
+		deny  all;
+	}
+}

@@ -9,6 +9,7 @@ node "puppet.kohanaframework.org" {
 	include website::www
 	include website::forum
 	include website::dev
+	include website::pear
 	#include website::ci
 }
 
@@ -18,6 +19,7 @@ node "vm01.kohanaframework.org" {
 
 	include website::www
 	include website::forum
+	include website::pear
 }
 
 node "vm02.kohanaframework.org" {

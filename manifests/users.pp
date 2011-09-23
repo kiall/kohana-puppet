@@ -9,7 +9,8 @@ custom::user {
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
 			"www-forum.kohanaframework.org",
-			"www-ci.kohanaframework.org"
+			"www-ci.kohanaframework.org",
+			"www-pear.kohanaframework.org"
 		];
 	"zombor":
 		ensure => present,
@@ -20,7 +21,8 @@ custom::user {
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
 			"www-forum.kohanaframework.org",
-			"www-ci.kohanaframework.org"
+			"www-ci.kohanaframework.org",
+			"www-pear.kohanaframework.org"
 		];
 	"samsoir":
 		ensure => present,
@@ -31,7 +33,8 @@ custom::user {
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
 			"www-forum.kohanaframework.org",
-			"www-ci.kohanaframework.org"
+			"www-ci.kohanaframework.org",
+			"www-pear.kohanaframework.org"
 		];
 	"isaiah":
 		ensure => present,
@@ -42,7 +45,8 @@ custom::user {
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
 			"www-forum.kohanaframework.org",
-			"www-ci.kohanaframework.org"
+			"www-ci.kohanaframework.org",
+			"www-pear.kohanaframework.org"
 		];
 	"brmatt":
 		ensure => present,
@@ -52,7 +56,8 @@ custom::user {
 			"www-www.kohanaframework.org",
 			"www-dev.kohanaframework.org",
 			"www-forum.kohanaframework.org",
-			"www-ci.kohanaframework.org"
+			"www-ci.kohanaframework.org",
+			"www-pear.kohanaframework.org"
 		];
 }
 

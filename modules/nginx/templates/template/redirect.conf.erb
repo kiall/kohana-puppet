@@ -1,0 +1,13 @@
+server {
+	listen [::]:<%=listen %>;
+
+	server_name <%=name %>;
+	root /home/www-<%=name %>/current/;
+
+	index index.php;
+
+	error_log /home/www-<%=name %>/logs/nginx.error.log;
+	access_log /home/www-<%=name %>/logs/nginx.access.log;
+
+	rewrite ^(.*) <%=redirect_url %>$1 <%=redirect_type %>;
+}

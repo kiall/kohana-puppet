@@ -1,0 +1,49 @@
+# What a mess. Someone please suggest a cleaner way!
+server {
+	listen [::]:<%=listen %>;
+
+	server_name <%=name %>;
+
+	root /usr/share/nagios3/htdocs;
+
+	index index.php;
+
+	location /stylesheets {
+		root /etc/nagios3;
+
+		try_files $uri $uri/index.html =404;
+	}
+
+	location / {
+		rewrite ^/nagios3/images/(.*) /images/$1 break;
+
+		try_files $uri $uri/ =404;
+	}
+
+	# Prevent access to hidden files
+	location ~ /\. {
+		deny  all;
+	}
+
+	location ~* \.php {
+		fastcgi_pass 127.0.0.1:9000;
+		fastcgi_index index.php;
+
+		include fastcgi_params;
+		fastcgi_param SCRIPT_FILENAME /usr/share/nagios3/htdocs$fastcgi_script_name;
+	}
+
+	location ~ \.cgi$ {
+		root    /usr/lib/cgi-bin/nagios3;
+
+		rewrite ^/nagios3/cgi-bin/(.*)\.cgi /$1.cgi break;
+		rewrite ^/cgi-bin/nagios3/(.*)\.cgi /$1.cgi break;
+
+		include /etc/nginx/fastcgi_params;
+
+		fastcgi_param  SCRIPT_FILENAME  /usr/lib/cgi-bin/nagios3$fastcgi_script_name;
+		fastcgi_param  AUTH_USER        "nagiosadmin";
+		fastcgi_param  REMOTE_USER 	    "nagiosadmin";
+		fastcgi_pass   unix:/var/run/fcgiwrap.socket;
+	}
+}

@@ -1,8 +1,11 @@
 class php {
 
 	package {
-		"php5":
-			ensure => installed
+		[
+			"php5",
+			"php-pear"
+		]:
+			ensure => installed;
 	}
 
 }

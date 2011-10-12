@@ -12,7 +12,8 @@ package {
 		"ntp",
 		"python-software-properties",
 		"bash-completion",
-		"rsync"
+		"rsync",
+		"git"
 	]:
 		ensure  => latest;
 }
@@ -21,6 +22,9 @@ package {
 file {
 	"/etc/profile":
 		source => "puppet:///files/etc/profile";
+	"/etc/sudoers.d/100-puppet":
+		source => "puppet:///files/etc/sudoers.d/100-puppet",
+		mode   => 0440;
 }
 
 # Export a nagios host

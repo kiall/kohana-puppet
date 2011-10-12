@@ -24,5 +24,5 @@ import "common.pp"
 import "users.pp"
 import "role.pp"
 import 'website.pp'
-import "nagios.pp"
+#import "nagios.pp"
 import "nodes.pp"

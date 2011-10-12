@@ -1,0 +1,3 @@
+# Members of the admin group can sudo without a password
+# TODO: Tighten this up!
+%admin ALL=(ALL) NOPASSWD:ALL

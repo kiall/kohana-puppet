@@ -1,16 +1,16 @@
 # Define Nodes
 node "puppet.kohanaframework.org" {
 	include role::puppet
-	include role::web
-	include role::mysql
-	#include role::ci
-	include role::monitor
+#	include role::web
+#	include role::mysql
+#	#include role::ci
+#	include role::monitor
 
-	include website::www
-	include website::forum
-	include website::dev
-	include website::pear
-	#include website::ci
+#	include website::www
+#	include website::forum
+#	include website::dev
+#	include website::pear
+#	#include website::ci
 }
 
 node "vm01.kohanaframework.org" {

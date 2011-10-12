@@ -12,7 +12,7 @@ class custom {
 		group {
 			$name:
 				ensure  => $ensure,
-				require => User[$name]
+				require => User[$name];
 		}
 
 		$home_ensure = $ensure ? {

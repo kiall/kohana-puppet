@@ -5,6 +5,7 @@ class role::ci inherits role
 	include php
 	include php::pear::phpunit
 	include php::pear::phing
+	include php::pear::phpcpd
 	include php::pear::php_codesniffer_standards_kohana
 	include php::pecl::xdebug
 

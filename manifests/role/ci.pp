@@ -17,8 +17,5 @@ class role::ci inherits role
 		"role-ci-git":
 			ensure  => latest,
 			name    => "git";
-                "role-ci-php":
-                        ensure  => latest,
-                        name    => "php5-cli";
 	}
 }

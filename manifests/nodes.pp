@@ -26,6 +26,10 @@ node "vm02.kohanaframework.org" {
 	include role::ci
 }
 
+node "server-55.novalocal" {
+	include role::ci
+}
+
 node "vm03.kohanaframework.org" {
 	include role::web
 

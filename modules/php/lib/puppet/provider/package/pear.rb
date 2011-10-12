@@ -78,10 +78,9 @@ Puppet::Type.type(:package).provide :pear, :parent => Puppet::Provider::Package 
   end
 
   def install(useversion = true)
-    command = ["upgrade", "--onlyreqdeps"]
+    command = ["upgrade", "--onlyreqdeps", "-f"]
 
     if (! @resource.should(:ensure).is_a? Symbol) and useversion
-#      command << "-f"
       if (@resource[:source])
         command << "#{@resource[:source]}/#{@resource[:name]}-#{@resource.should(:ensure)}"
       else

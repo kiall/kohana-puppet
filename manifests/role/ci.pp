@@ -6,8 +6,12 @@ class role::ci inherits role
 	include php::pear::phpunit
 	include php::pear::phing
 	include php::pear::phpcpd
+	include php::pear::pdepend
+	include php::pear::php_pmd
 	include php::pear::php_codesniffer_standards_kohana
+	include php::pear::php_codebrowser
 	include php::pecl::xdebug
+	include php::pecl::gd
 
 	package {
 		"role-ci-git":

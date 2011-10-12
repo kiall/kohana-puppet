@@ -12,7 +12,7 @@ fi
 
 if [ "$PS1" ]; then
   if [ "$BASH" ]; then
-    PS1='\u@\h:\w\$ '
+    PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     if [ -f /etc/bash.bashrc ]; then
 	. /etc/bash.bashrc
     fi
@@ -25,6 +25,6 @@ if [ "$PS1" ]; then
   fi
 fi
 
-#umask 022
-umask 007
+umask 002
+
 export PATH=/var/lib/gems/1.8/bin:$PATH

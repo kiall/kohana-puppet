@@ -21,7 +21,8 @@ package {
 # Setup default umask ..
 file {
 	"/etc/profile":
-		source => "puppet:///files/etc/profile";
+		source => "puppet:///files/etc/profile",
+		mode   => 0644;
 	"/etc/sudoers.d/100-puppet":
 		source => "puppet:///files/etc/sudoers.d/100-puppet",
 		mode   => 0440;

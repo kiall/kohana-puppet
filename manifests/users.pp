@@ -70,6 +70,18 @@ custom::user {
 #			"www-pear.kohanaframework.org"
 		],
 		require => Group["developers"];
+	"zeelot":
+		ensure => present,
+		groups => [
+			"developers",
+#			"www-kohanaframework.org",
+#			"www-www.kohanaframework.org",
+#			"www-dev.kohanaframework.org",
+#			"www-forum.kohanaframework.org",
+#			"www-ci.kohanaframework.org",
+#			"www-pear.kohanaframework.org"
+		],
+		require => Group["developers"];
 }
 
 # Setup SSH Keys
@@ -109,4 +121,11 @@ ssh_authorized_key {
 		key     => "AAAAB3NzaC1yc2EAAAABIwAAAQEAwpzZ9IwKtKZXkVasS+FBod2Qo+mxLPSyQ4qZrEzE+LQiBoMMol9guJHgOLbMmH0ekL4tMm3e67oZaIaW/XoLeBPi86VnTXxw8UekJaQbpZNrCOxDuolvBqvsxJpYguw7TIJOnEKrdOfPPCgdAvfn3C24Ck+PL6LZ3TGAvreKqY7khhuEo5lKQayRhBnO3whmzh9ijnhYNuLV/c3uxQaWygm02jqqrhzM/BtNtpV/CjcGJdFIt96UFXdQPCS2rx+KEA0nR1uL0YuG1RDK2GoKmN8WG/jrdlQ08fcXZtoCHePI8eUG2hlMYO1pjLoiL/ZLB3mwkahGlZxK58bUmdNf2w==",
 		options => [],
 		require => Custom::User["samsoir"];
+	"zeelot3k@gmail.com":
+		ensure  => present,
+		user    => "zeelot",
+		type    => "ssh-rsa",
+		key     => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCvig5TpWLvR+JBqxSPqe3X0L4Xxkg0iN6PK/24v8GJCaljiKWkQrP7LDDw7hmoQo9dLMbvwJ9b38WZKjrYMEujGZEbL9YND3FfHSG7xT/GTVU/NntcjnjNnonIHwZcKU2ihZ01kMJrHmuWeB91V1xiebnvs9fWxbh/j8L+Ym/6VAKOuu/M+8OgwstjRj78/nCy9GRtfl/qJsysCp1HPPyzCYmuizp5P7YG+a39gSWkbArt8GYdlcvDCkF+KHGSPMmE/teB4ZrrBsG+Bs4+G8CA1HJHrFTbqy1zTJhbcCo3CzKpvcSlpsB0hase1XAA5lMqhhWLTOlcnQyo9IsC5vbj",
+		options => [],
+		require => Custom::User["zeelot"];
 }

@@ -7,6 +7,7 @@ class role::ci inherits role
 	include php::pear::phing
 	include php::pear::phpcpd
 	include php::pear::pdepend
+	include php::pear::behat
 	include php::pear::php_pmd
 	include php::pear::php_codesniffer_standards_kohana
 	include php::pear::php_codebrowser

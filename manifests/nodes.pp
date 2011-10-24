@@ -22,7 +22,7 @@ node "vm01.kohanaframework.org" {
 	include website::pear
 }
 
-node "vm02.kohanaframework.org" {
+node "ci.kohanaframework.org" {
 	include role::ci
 }
 
